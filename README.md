@@ -57,3 +57,5 @@ pom.xml                     // Maven configuration file
     ```java
     private final String API_KEY = "your_actual_api_key_here";
     ```
+
+    ![alt text](image.png)

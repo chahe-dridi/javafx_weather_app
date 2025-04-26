@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane1" cache="true" cacheHint="QUALITY" pickOnBounds="false" prefHeight="613.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.WeatherController">
+    <children>
+
+        <!-- Input field for typing city/country -->
+        <TextField fx:id="cityInput" layoutX="70.0" layoutY="171.0" prefWidth="150.0" promptText="Enter city" />
+
+        <Button fx:id="searchButton" layoutX="300.0" layoutY="168.0" onAction="#onSearchClicked" prefWidth="80.0" text="Search">
+            <font>
+                <Font name="Century Gothic" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- (Rest of your existing design) -->
+
+        <!-- Top Bar -->
+        <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="90.2" prefWidth="1002.0" style="-fx-background-color: #2B2B2B;">
+            <children>
+                <Text fx:id="City" fill="WHITE" layoutX="2.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City: not chosen" wrappingWidth="530.13671875">
+                    <font>
+                        <Font name="Century Gothic" size="39.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+        <!-- Main Weather Info -->
+        <AnchorPane fx:id="anchorPane3" layoutX="572.0" layoutY="110.0" prefHeight="171.0" prefWidth="414.0" style="-fx-border-radius: 20px; -fx-border-color: #2B2B2B; -fx-border-width: 10px;">
+            <children>
+                <Text fx:id="Degrees" layoutX="8.0" layoutY="63.0" stroke="WHITE" text="0.0°C" wrappingWidth="390.13671875">
+                    <font>
+                        <Font name="Century Gothic" size="75.0" />
+                    </font>
+                </Text>
+                <ImageView fx:id="Weather" fitHeight="48.0" fitWidth="54.0" layoutX="350.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@cloud.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="AboutCity" fitHeight="63.0" fitWidth="67.0" layoutX="42.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@cloud.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>
